@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بطاقة حسن نزال</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- إعدادات عامة --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- حاوية البطاقة --- */
+        .profile-card {
+            background-color: white;
+            width: 100%;
+            max_width: 400px;
+            padding: 40px 20px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* --- صورة الشخص --- */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* --- النصوص --- */
+        h1 {
+            color: #2c3e50;
+            margin: 10px 0 5px;
+            font-size: 24px;
+        }
+        p.job-title {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p.bio {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        /* --- الأزرار والروابط --- */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .link-btn i {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        /* --- ألوان الأزرار (الجزء الذي كان ناقصاً) --- */
+        .github { background-color: #333; }
+        .linkedin { background-color: #0077b5; }
+        .email { background-color: #e74c3c; }
+
+        /* الألوان الجديدة */
+        .facebook { background-color: #1877f2; }
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .whatsapp { background-color: #25D366; }
+
+        .save-contact {
+            background-color: #34495e;
+            border: 2px dashed #2c3e50;
+            margin-top: 10px;
+        }
+
+        /* --- تذييل --- */
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="../Hassan%20Nazzal.png" alt="صورة حسن نزال" class="profile-img">
+
+        <h1>حسن نزال المنصوري</h1>
+        <p class="job-title">مطور بايثون | Python Developer</p>
+
+        <p class="bio">
+            أعمل في تطوير البرمجيات وحلول الذكاء الاصطناعي. شغوف بالبيانات والأتمتة.
+            <br>
+            متاح للعمل الحر والمشاريع البرمجية.
+        </p>
+
+        <div class="links-container">
+
+            <a href="https://www.facebook.com/share/17v1UK4TUa/" class="link-btn facebook" target="_blank">
+                <i class="fab fa-facebook"></i> فيسبوك
+            </a>
+
+            <a href="https://www.instagram.com/lq_bc?igsh=Z2E2aHQzbWRua3k2" class="link-btn instagram" target="_blank">
+                <i class="fab fa-instagram"></i> انستقرام
+            </a>
+
+            <a href="https://www.linkedin.com/in/hassan-nazzal-almansury-4b9275251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="link-btn linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i> حساب LinkedIn
+            </a>
+
+            <a href="https://wa.me/9647835355452" class="link-btn whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+            </a>
+
+            <a href="mailto:eng.97elc@gmail.com" class="link-btn email">
+    <i class="fas fa-envelope"></i> راسلني بالإيميل
+</a>
+
+            <a href="#" class="link-btn save-contact" onclick="downloadContact()">
+                <i class="fas fa-user-plus"></i> حفظ جهة الاتصال
+            </a>
+
+        </div>
+
+        <footer>
+            تم التصميم بواسطة Eng.Hassan Nazzal
+        </footer>
+    </div>
+
+    <script>
+        function downloadContact() {
+            // --- بياناتك للحفظ في الهاتف ---
+            const contact = {
+                name: "حسن نزال المنصوري",
+                phone: "+9647835355452",      // ضع رقمك الحقيقي هنا
+                email: "eng.97elc@gmail.com",  // ضع إيميلك الحقيقي هنا
+                Facebook: "https://www.facebook.com/share/17v1UK4TUa/",                 // يمكنك وضع رابط فيسبوك هنا إذا لم يكن لديك موقع
+                title: "Python Developer"
+            };
+
+            const vcardContent = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                `FN;CHARSET=UTF-8:${contact.name}`,
+                `TITLE;CHARSET=UTF-8:${contact.title}`,
+                `TEL;TYPE=CELL:${contact.phone}`,
+                `EMAIL:${contact.email}`,
+                `URL:${contact.website}`,
+                'END:VCARD'
+            ].join('\n');
+
+            const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'Hassan_Nazzal.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+</html>
